@@ -1,0 +1,165 @@
+\documentclass[liststotoc,bibtotoc,fontsize=14pt,]{scrreprt}
+\usepackage[utf8]{inputenc} % Zeichenkodierung
+\usepackage[ngerman]{babel} % neue deutsche Rechtschreibung
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\raggedright}{}{}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{breakurl}
+\usepackage{float}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\usepackage[breaklinks]{hyperref}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{tocloft}
+\usepackage{chngcntr}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\counterwithout{footnote}{chapter}
+
+\deffootnote[2em]{2em}{2em}{%
+	\makebox[2em][l]{\bfseries\thefootnotemark}}
+
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\usepackage{amsmath}
+\usepackage[paper=a4paper,left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[section]{placeins}
+\usepackage[font=small,justification=justified]{caption}
+\newcommand{\namesigdate}[3][Ort, Datum]{%
+	\parbox{\textwidth}{
+		\raggedleft #3 
+		\vspace{2cm}
+		
+		\parbox{5cm}{
+			\raggedright
+			\rule{6cm}{1pt}\\
+			#1 
+		}
+		\hfill
+		\parbox{5cm}{
+			\raggedright
+			\rule{6cm}{1pt}\\
+			#2
+		}
+	}
+}
+
+
+\newcommand*{\tabularwidth}{}
+\newdimen\tabularwidth
+\usepackage{minitoc}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+
+\title{Dokumentation Panoramafotografie}
+\author{Sebastian Degner}
+
+\begin{document}
+	%\maketitle
+	
+	\begin{titlepage}
+		\begin{center}
+			\vspace{2cm}
+			Dokumentation\\ \textbf{ Multishot-Technik in der digitalen Fotografie}\\ 
+			\vspace{2,5cm}
+			\includegraphics[width=5cm]{HTWK_Logo_RGB-transparent_250.png}\\
+			
+			\vspace{2,5cm}
+			\huge \textbf{\textsf{Dokumentation Panoramafotografie}} \\
+			\vspace{3cm}
+			\fontsize{15}{18} \textbf{Hochschule für Technik, Wirtschaft und Kultur
+				Leipzig\\ Fakultät Informatik, Mathematik und Naturwissenschaften\\   Masterstudiengang Medieninformatik}\\
+			\vspace{3cm}
+		\end{center}
+		\normalsize{
+			\begin{tabular}{ll}
+				Eingereicht von: & {Sebastian Degner} \\
+				 & {Sebastian Knabe} \\
+				Studiengang: & 15 MIM\\
+				Eingereicht am: & 09. Dezember 2016 \\
+			\end{tabular}\\
+		}
+		
+	\end{titlepage}
+	
+	
+	
+	
+	
+	\tableofcontents
+	\clearpage
+	\listoffigures
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+
+	\chapter{Einleitung}
+	\label{ch:einleitung}
+		
+	\chapter{Vorbereitung}
+	\label{ch:vorbereitung}
+	
+	\section{Verwendete Kameratechnik}
+	\label{sec:technik}
+	
+	\section{Justage des NPP}
+	\label{sec:npp}
+	
+	\chapter{Aufnahmen}
+	\label{ch:aufnahmen}
+	
+	\section{180$^\circ$ Tagaufnahme -- Speck\grq s Hof}
+	\label{sec:specks}
+
+	
+	\section{180 $^\circ$ Tagaufnahme -- Auerbachskeller}
+	\label{sec:mädler}
+
+	\section{180$^\circ$ Nachtaufnahme -- Richard Wagner Platz}
+	\label{sec:wagner}
+	
+	\section{360$^\circ$ Tagaufnahme -- Augustusplatz}
+	\label{sec:augustus}
+	
+	\section{360$^\circ$ Nachtaufnahme -- Marktplatz}
+	\label{sec:markt}
+	
+	\section{Kugelpanorama --  Mädler-Passage}
+	\label{sec:kugel}
+	
+	\chapter{Stitching}
+	\label{ch:stitiching}
+	
+	\section{Photoshop}
+	\label{sec:photoshop}
+
+	\section{PTGUI Pro}
+	\label{sec:ptgui}
+	
+	\chapter{Nachbearbeitung}
+	\label{ch:nach}
+	
+	\section{Lightroom}
+	\label{sec:lightroom}
+	
+	\section{Photoshop}
+	\label{sec:photo}
+	
+
+	
+	\begin{thebibliography}{999}
+	
+		
+	\end{thebibliography}
+	
+\end{document}
