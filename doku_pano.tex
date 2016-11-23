@@ -202,17 +202,41 @@
 		\label{img:ptgui_step_6}
 	\end{figure}
 	\bigskip
-	Nach all diesen Schritten, kann das Panorama exportiert werden s. Abb. \ref{img:ptgui_step_7}. Für dieses Projekt wird das Panorama im TIFF-Format gespeichert, um es in der Nachbearbeitung möglichst verlustfrei korrigieren zu können.
+	Nach all diesen Schritten, kann das Panorama exportiert werden s. Abb. \ref{img:ptgui_step_7}. Für dieses Projekt wird das Panorama im TIFF-Format gespeichert, um es in der Nachbearbeitung möglichst verlustfrei korrigieren zu können. Durch einen Klick auf \grqq{}Create Panorama\grqq{} wird der Speichervorgang gestartet. Alternativ ist es auch möglich zusätzlich eine Projektdatei anzulegen, welche für eventuelle, nachträgliche Korrekturen geladen werden kann. 
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/PTGui_Step_7.PNG}
 		\caption{PTGui Pro: Export}
 		\label{img:ptgui_step_7}
 	\end{figure}
 	
-	\section{Photoshop}
+	\section{Adobe Photoshop}
 	\label{sec:photoshop}
-	Stapelverarbeitung > Automatisch > fertig
-	%TODO Bild
+	Adobe Photoshop beinhaltet das Tool \grqq{}Photomerge\grqq{}, mit dessen Hilfe Bilderreihen zu Panoramas zusammengefügt werden können. Dieses Kapitel befasst sich deswegen mit dem Stitching mittels Photoshop, wobei zugleich das Programm PTGui Pro (Kap. \ref{sec:ptgui}) als Vergleich herbeigezogen wird.
+	\bigskip
+	Das Tool Photomerge ist über das Menü unter Datei, Automatisieren zu erreichen. Nach dem Starten öffnet sich ein neues Fenster mit mehreren Einstellungsmöglichkeiten s. Abb. \ref{img:photoshop_step_2}.
+	In dieser Ansicht kann auf der linken Seite der gewünschte Panoramatyp mittels einer Checkbox ausgewählt werden. In der Mitte befindet sich der Fotoimport. Es werden alle gängigen Bildformate unterstützt, auch RAW-Dateien. Zusätzliche Korrekturen, wie Vignettierungsentfernung, Verzerrungskorrektur und Auffüllung von Leerbereichen sind auswählbar. Im Gegensatz zu PTGui Pro sind keine weiteren Einstellungsmöglichkeiten vorhanden. Mit der Bestätigung auf \grqq{}OK\grqq{} erstellt Photomerge selbstständig und automatisiert ein Panorama.
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/steps/Photoshop_Step_2.png}
+		\caption{Photomerge: Startbildschirm}
+		\label{img:photoshop_step_2}
+	\end{figure}
+	\bigskip
+
+	Photomerge lädt die Fotos während des Stitchen als Ebenen in Photoshop und realisiert die Überblendungen der Einzelbilder mittels Ebenenmasken s. Abb. \ref{img:photoshop_step_3}. In diesem Beispiel handelt es sich um das 180 Grad Panorama vom Speck\grq s Hof (\ref{sec:specks}). Das Resultat ist einwandfrei und beinhaltet keinerlei Überblendungsfehler.
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/steps/Photoshop_Step_3.png}
+		\caption{Photomerge: Speck\grq s Hof}
+		\label{img:photoshop_step_3}
+	\end{figure}
+	\bigskip
+	Anders verhält es sich bei komplexeren Panoramen, wie z. B. bei dem Kugelpanorama der Mädler--Passage (s. Abb. \ref{img:photoshop_step_kugel}). Photomerge ist es nicht gelungen die Bilder in der richtigen Reihenfolge zusammenzusetzen. Da das Tool keine Möglichkeit einer Korrektur, Nachjustierung oder Neuanordnung bietet, kann das Panorama nicht damit umgesetzt werden.
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/steps/Photoshop_Step_Kugel.png}
+		\caption{Photomerge: Kugelpanorama}
+		\label{img:photoshop_step_kugel}
+	\end{figure}
+	\bigskip
+	Photoshop eignet sich daher für einfache Panoramen mit einer Ebene. Sobald die Anordnung der Fotos komplexer wird oder manuelle Korrekturen vorgenommen werden müssen, sollte auf eine Spezialsoftware zurückgegriffen werden.  
 	
 	\chapter{Nachbearbeitung}
 	\label{ch:nach}
