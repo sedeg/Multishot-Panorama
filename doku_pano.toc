@@ -1,36 +1,35 @@
 \select@language {ngerman}
-\contentsline {chapter}{Abbildungsverzeichnis}{3}{Doc-Start}
-\contentsline {chapter}{\numberline {1}Einleitung}{4}{chapter.1}
-\contentsline {chapter}{\numberline {2}Justage des NPP}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Aufnahmen}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}180$^\circ $ Panorama -- Speck\grq s Hof}{6}{section.3.1}
-\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{6}{section*.1}
-\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{7}{section*.3}
-\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{7}{section*.4}
-\contentsline {section}{\numberline {3.2}180$^\circ $ Panorama -- Auerbachskeller}{8}{section.3.2}
-\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{8}{section*.5}
-\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{9}{section*.7}
-\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{9}{section*.9}
-\contentsline {section}{\numberline {3.3}180$^\circ $ Nachtpanorama -- Richard Wagner Platz}{9}{section.3.3}
-\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{9}{section*.10}
-\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{10}{section*.12}
-\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{11}{section*.13}
-\contentsline {section}{\numberline {3.4}360$^\circ $ Panorama -- Augustusplatz}{12}{section.3.4}
-\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{12}{section*.15}
-\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{13}{section*.17}
-\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{13}{section*.19}
-\contentsline {section}{\numberline {3.5}360$^\circ $ Nachtpanorama -- Marktplatz}{14}{section.3.5}
-\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{14}{section*.20}
-\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{15}{section*.22}
-\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{15}{section*.24}
-\contentsline {section}{\numberline {3.6}Kugelpanorama -- M\IeC {\"a}dler-Passage}{16}{section.3.6}
-\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{16}{section*.27}
-\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{17}{section*.29}
-\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{17}{section*.31}
-\contentsline {chapter}{\numberline {4}Stitching}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}PTGUI Pro}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Adobe Photoshop}{25}{section.4.2}
-\contentsline {chapter}{\numberline {5}Nachbearbeitung}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Adobe Photoshop}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Adobe Lightroom}{30}{section.5.2}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{32}{chapter*.45}
+\contentsline {chapter}{Abbildungsverzeichnis}{4}{Doc-Start}
+\contentsline {chapter}{\numberline {1}Einleitung}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Justage des NPP}{6}{chapter.2}
+\contentsline {chapter}{\numberline {3}Aufnahmen}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}180$^\circ $ Panorama -- Speck\grq s Hof}{9}{section.3.1}
+\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{9}{section*.2}
+\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{10}{section*.4}
+\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{10}{section*.5}
+\contentsline {section}{\numberline {3.2}180$^\circ $ Panorama -- Auerbachs Keller}{10}{section.3.2}
+\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{10}{section*.6}
+\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{11}{section*.8}
+\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{12}{section*.10}
+\contentsline {section}{\numberline {3.3}180$^\circ $ Nachtpanorama -- Richard Wagner Platz}{12}{section.3.3}
+\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{12}{section*.11}
+\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{13}{section*.13}
+\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{13}{section*.14}
+\contentsline {section}{\numberline {3.4}360$^\circ $ Panorama -- Augustusplatz}{14}{section.3.4}
+\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{14}{section*.16}
+\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{15}{section*.18}
+\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{15}{section*.20}
+\contentsline {section}{\numberline {3.5}360$^\circ $ Nachtpanorama -- Marktplatz}{16}{section.3.5}
+\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{16}{section*.21}
+\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{17}{section*.23}
+\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{17}{section*.25}
+\contentsline {section}{\numberline {3.6}Kugelpanorama -- M\IeC {\"a}dler-Passage}{18}{section.3.6}
+\contentsline {subsubsection}{\nonumberline Aufnahmeort und -idee}{18}{section*.28}
+\contentsline {subsubsection}{\nonumberline Kameraeinstellungen}{19}{section*.30}
+\contentsline {subsubsection}{\nonumberline Vorgehen und Fehleranalyse}{19}{section*.32}
+\contentsline {chapter}{\numberline {4}Stitching}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}PTGUI Pro}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Adobe Photoshop}{28}{section.4.2}
+\contentsline {chapter}{\numberline {5}Nachbearbeitung}{32}{chapter.5}
+\contentsline {section}{\numberline {5.1}Adobe Photoshop}{32}{section.5.1}
+\contentsline {section}{\numberline {5.2}Adobe Lightroom}{33}{section.5.2}
