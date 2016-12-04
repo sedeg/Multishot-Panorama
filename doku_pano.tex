@@ -4,6 +4,8 @@
 \usepackage{etoolbox}
 \apptocmd{\thebibliography}{\raggedright}{}{}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{url}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{breakurl}
@@ -115,6 +117,26 @@
 	
 	\section{Justage des NPP}
 	\label{sec:npp}
+	Um das Auftreten von Parallaxfehlern im Vordergrund bei der Zusammensetzung der Bildreihe zu vermeiden, gilt es vor der Aufnahme den No Parallax Point (NPP) einzustellen. Das bedeutet, dass die Kamera um die Eintrittspupille des Objektives zu drehen ist. Die beiden Nodalpunkte des Systems befinden sich vor und hinter dieses Punktes. Deshalb gibt es für die Panoramafotografie spezielle Nodalpunktadapter, durch welche eine präzise Ausrichtung, mittels von einer horizontalen und einer waagerechten Schiene, des Kamerasystems möglich ist.
+	\bigskip
+	Justiert wird durch das Verschieben der Kamera mittels zweier Schlitten. Durch den horizontal Gelegenen erfolgt die Ausrichtung des Objektives zentral über dem Stativkopf. Die zweite in waagerechter Haltung befindliche Schiene kann nach vorne und hinten verschoben werden. Dadurch soll erreicht werden, dass sich Objekte im Vordergrund bei einem Kameraschwenk, im Bezug auf ein Hintergrundobjekt, nicht verschieben. In der Abbildung \ref{fig:justage} ist ein solcher Kameraschwenk zu sehen. Dabei befindet sich die Laterne im Vordergrund und die Garageneinfahrt dahinter im Hintergrund. Aus den Aufnahmen geht deutlich hervor, dass die Laterne ihre Position bei einem Schwenk nicht verändert und der NPP somit korrekt eingestellt ist.
+	
+	
+	\begin{figure}[H]
+		\begin{subfigure}[b]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{img/places/npp_l.JPG}
+			\caption{Laterne links}
+			\label{fig:npp_l}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{img/places/npp_r.JPG}
+			\caption{Laterne rechts}
+			\label{fig:npp_r}
+		\end{subfigure}
+		\caption{Justage des NPP}
+		\label{fig:justage}
+	\end{figure}
 	
 	\chapter{Aufnahmen}
 	\label{ch:aufnahmen}
@@ -382,7 +404,6 @@
 		\caption{Photoshop: Nachbearbeitung}
 		\label{img:photoshop_bearbeitung}
 	\end{figure}
-	
 	
 	\section{Adobe Lightroom}
 	\label{sec:lightroom}
