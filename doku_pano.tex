@@ -4,6 +4,8 @@
 \usepackage{etoolbox}
 \apptocmd{\thebibliography}{\raggedright}{}{}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{url}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{breakurl}
@@ -109,6 +111,29 @@
 		
 	\chapter{Justage des NPP}
 	\label{sec:npp}
+	Um das Auftreten von Parallaxfehlern im Vordergrund bei der Zusammensetzung der Bildreihe zu vermeiden, gilt es vor der Aufnahme den No Parallax Point (NPP) einzustellen. Das bedeutet, dass die Kamera um die Eintrittspupille des Objektives zu drehen ist. Die beiden Nodalpunkte des Systems befinden sich vor und hinter dieses Punktes. Deshalb gibt es für die Panoramafotografie spezielle Nodalpunktadapter, durch welche eine präzise Ausrichtung, mittels von einer horizontalen und einer waagerechten Schiene, des Kamerasystems möglich ist.
+	\bigskip
+	Justiert wird durch das Verschieben der Kamera mittels zweier Schlitten. Durch den horizontal Gelegenen erfolgt die Ausrichtung des Objektives zentral über dem Stativkopf. Die zweite in waagerechter Haltung befindliche Schiene kann nach vorne und hinten verschoben werden. Dadurch soll erreicht werden, dass sich Objekte im Vordergrund bei einem Kameraschwenk, im Bezug auf ein Hintergrundobjekt, nicht verschieben. In der Abbildung \ref{fig:justage} ist ein solcher Kameraschwenk zu sehen. Dabei befindet sich die Laterne im Vordergrund und die Garageneinfahrt dahinter im Hintergrund. Aus den Aufnahmen geht deutlich hervor, dass die Laterne ihre Position bei einem Schwenk nicht verändert und der NPP somit korrekt eingestellt ist.
+	
+	\begin{figure}[H]
+		\begin{subfigure}[b]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{img/places/npp_l.JPG}
+			\caption{Laterne links}
+			\label{fig:npp_l}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{img/places/npp_r.JPG}
+			\caption{Laterne rechts}
+			\label{fig:npp_r}
+		\end{subfigure}
+		\caption{Justage des NPP}
+		\label{fig:justage}
+	\end{figure}
+	\bigskip
+	
+	Zu Beginn der Ausrichtung muss ein passendes Motiv mit einem Vordergrund- und Hintergrundobjekt gesucht werden. Dafür eignen sich vor allem Straßenlaternen oder Beschilderung. Anschließend ist es notwendig, das Stativ waage auszurichten. Dies ist mit Hilfe der Wasserwagen am Stativ und am Stativkopf möglich. Anschließend muss die Kamera so geschwenkt werden, dass das Vordergrundobjekt am linken oder rechten Bildrand des Fotos zu sehen ist. Verändert sich der Standort des Objektes bei einem Schwenk in die entgegengesetzte Richtung im Bezug auf den Hintergrund nicht, ist der NPP gefunden. 
+	Andernfalls muss das Kamerasystem noch justiert werden. Dies geschieht durch das Vor- oder Zurückschieben des Schlittens, auf welchem die Kamera befestigt ist. Wandert das Vordergrundobjekt bei einem Linksschwenk von links nach rechts, muss das System nach hinten verschoben werden. Verschiebt sich das Objekt bei einem Rechtsschwenk hingegen nach links, justiert man das Kamerasystem durch das nach Verschieben nach vorne.
 	
 	\chapter{Aufnahmen}
 	\label{ch:aufnahmen}
@@ -471,7 +496,6 @@
 		\caption{Photoshop: Nachbearbeitung}
 		\label{img:photoshop_bearbeitung}
 	\end{figure}
-	
 	
 	\section{Adobe Lightroom}
 	\label{sec:lightroom}
