@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc} % Zeichenkodierung
 \usepackage[ngerman]{babel} % neue deutsche Rechtschreibung
 \usepackage{etoolbox}
+\setlength{\footskip}{30pt}
 \apptocmd{\thebibliography}{\raggedright}{}{}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -75,7 +76,7 @@
 	\begin{titlepage}
 		\begin{center}
 			\vspace{2cm}
-			Dokumentation\\ \textbf{ Multishot-Technik in der digitalen Fotografie}\\ 
+			Dokumentation\\ \textbf{Multishot-Technik in der digitalen Fotografie}\\ 
 			\vspace{2,5cm}
 			\includegraphics[width=5cm]{HTWK_Logo_RGB-transparent_250.png}\\
 			
@@ -97,10 +98,6 @@
 		
 	\end{titlepage}
 	
-	
-	
-	
-	
 	\tableofcontents
 	\clearpage
 	\listoffigures
@@ -108,13 +105,17 @@
 
 	\chapter{Einleitung}
 	\label{ch:einleitung}
+	Im Rahmen des \textit{Moduls Multishot-Technik in der digitalen Fotografie} wurde diese Dokumentation zu dem Thema \textit{Panoramafotografie} realisiert. Dafür werden mehrere 180$^\circ$- und 360$^\circ$- Panoramen, sowie ein Kugelpanorama umgesetzt. Damit ein Panorama aus mehren Einzelaufnahmen zusammengesetzt werden kann, muss man einige Besonderheiten beachten, da es sonst zu Fehlern kommt. Dies betrifft sowohl, die Vorbereitung der Technik, wie beispielsweise die Justage des No Parallax Point, sowie die Nachbereitung, also das sogenannte Stitching der Einzelaufnahmen zu einem Panorama. 
+	
+	\bigskip
+	Im Verlauf dieser Arbeit wird detailliert gezeigt, wie die insgesamt sechs Panoramen erstellt werden. Dabei wird die richtige Kalibrierung der Technik, die jeweilige Bildidee, das Stitching, bis hin zur Nachbearbeitung genau erläutert.
 		
 	\chapter{Justage des NPP}
 	\label{sec:npp}
-	Um das Auftreten von Parallax-Fehler im Vordergrund bei der Zusammensetzung der Bildreihe zu vermeiden, gilt es vor der Aufnahme den No Parallax Point (NPP) einzustellen. Das bedeutet, dass die Kamera um die Eintrittspupille des Objektives zu drehen ist. Die beiden Nodalpunkte des Systems befinden sich vor und hinter dieses Punktes. Deshalb gibt es für die Panoramafotografie spezielle Nodalpunktadapter, durch welche eine präzise Ausrichtung, mittels von einer horizontalen und einer waagerechten Schiene, des Kamerasystems möglich ist.
+	Um das Auftreten von Parallax-Fehlern im Vordergrund bei der Zusammensetzung der Bildreihe zu vermeiden, gilt es vor der Aufnahme den No Parallax Point (NPP) einzustellen. Das bedeutet, dass die Kamera um die Eintrittspupille des Objektivs zu drehen ist. Die beiden Nodalpunkte des Systems befinden sich vor und hinter diesem Punkt. Deshalb gibt es für die Panoramafotografie spezielle Nodalpunktadapter, durch welche eine präzise Ausrichtung, mittels einer horizontalen und einer waagerechten Schiene, des Kamerasystems möglich ist.
 
 	\bigskip
-	Justiert wird durch das Verschieben der Kamera mittels zweier Schlitten. Durch den horizontal Gelegenen erfolgt die Ausrichtung des Objektives zentral über dem Stativkopf. Die zweite in waagerechter Haltung befindliche Schiene kann nach vorne und hinten verschoben werden. Dadurch soll erreicht werden, dass sich Objekte im Vordergrund bei einem Kameraschwenk, im Bezug auf ein Hintergrundobjekt, nicht verschieben. In der Abbildung \ref{fig:justage} ist ein solcher Kameraschwenk zu sehen. Dabei befindet sich die Laterne im Vordergrund und die Garageneinfahrt dahinter im Hintergrund. Aus den Aufnahmen geht deutlich hervor, dass die Laterne ihre Position bei einem Schwenk nicht verändert und der NPP somit korrekt eingestellt ist. 
+	Justiert wird durch das Verschieben der Kamera mittels zweier Schlitten. Durch den horizontal gelegenen erfolgt die Ausrichtung des Objektives zentral über dem Stativkopf. Die zweite in waagerechter Haltung befindliche Schiene kann nach vorn und hinten verschoben werden. Dadurch soll erreicht werden, dass sich Objekte im Vordergrund bei einem Kameraschwenk, im Bezug auf ein Hintergrundobjekt, nicht verschieben. In der Abbildung \ref{fig:justage} ist ein solcher Kameraschwenk zu sehen. Dabei befindet sich die Laterne im Vordergrund und die Garageneinfahrt im Hintergrund. Aus den Aufnahmen geht deutlich hervor, dass die Laterne ihre Position bei einem Schwenk nicht verändert und der NPP somit korrekt eingestellt ist. 
 	
 	\begin{figure}[H]
 		\begin{subfigure}[b]{0.5\textwidth}
@@ -133,10 +134,10 @@
 	\end{figure}
 	\bigskip
 	
-	Zu Beginn der Ausrichtung muss ein passendes Motiv mit einem Vordergrund- und Hintergrundobjekt gesucht werden. Dafür eignen sich vor allem Straßenlaternen oder Beschilderung. Anschließend ist es notwendig, das Stativ in Waage auszurichten. Dies ist mit Hilfe der Wasserwagen am Stativ und am Stativkopf möglich. Anschließend muss die Kamera so geschwenkt werden, dass das Vordergrundobjekt am linken oder rechten Bildrand des Fotos zu sehen ist. Verändert sich der Standort des Objektes bei einem Schwenk in die entgegengesetzte Richtung im Bezug auf den Hintergrund nicht, ist der NPP gefunden. 
+	Zu Beginn der Ausrichtung muss ein passendes Motiv mit einem Vorder\-grund- und Hintergrundobjekt gesucht werden. Dafür eignen sich vor allem Straßenlaternen oder Beschilderungen. Anschließend ist es notwendig, dass Stativ in Waage auszurichten. Dies ist mit Hilfe der Wasserwagen am Stativ und am Stativkopf möglich. Anschließend muss die Kamera so geschwenkt werden, dass das Vordergrundobjekt am linken oder rechten Bildrand des Fotos zu sehen ist. Verändert sich der Standort des Objektes bei einem Schwenk in die entgegengesetzte Richtung im Bezug auf den Hintergrund nicht, ist der NPP gefunden. 
 	
 	\bigskip
-	Andernfalls muss das Kamerasystem noch justiert werden. Dies geschieht durch das Vor- oder Zurückschieben des Schlittens, auf welchem die Kamera befestigt ist. Wandert das Vordergrundobjekt bei einem Linksschwenk von links nach rechts, muss das System nach hinten verschoben werden. Verschiebt sich das Objekt bei einem Rechtsschwenk hingegen nach links, justiert man das Kamerasystem durch das nach Verschieben nach vorne.
+	Andernfalls muss das Kamerasystem noch justiert werden. Dies geschieht durch das Vor- oder Zurückschieben des Schlittens, auf welchem die Kamera befestigt ist. Wandert das Vordergrundobjekt bei einem Linksschwenk von links nach rechts, muss das System nach hinten verschoben werden. Verschiebt sich das Objekt bei einem Rechtsschwenk hingegen nach links, justiert man das Kamerasystem durch verschieben nach vorn.
 	
 	\chapter{Aufnahmen}
 	\label{ch:aufnahmen}
@@ -145,7 +146,7 @@
 	\label{sec:specks}
 
 	\subsubsection{Aufnahmeort und -idee}
-	Charakteristisch für die Leipziger Innenstadt, ist die Vielzahl an Passagen und Durchgangshöfen, welche das Stadtbild prägen. Die älteste, erhaltene Ladenpassage ist Speck\grq s Hof, welche zwischen 1908 und 1929, durch den Bau des Messehauses entstand. Den Namen erhielt die Passage aufgrund des Kaufhofes des Freiherrn von Speck, welches zuvor an dieser Stelle stand. Sie befindet sich an der Kreuzung Reichstraße / Grimmaische Straße, in direkter Nähe zur Nikolaikirche und ist mit dem Hansa Haus verbunden. In den Jahren 1993 bis 1995 wurde die Passage aufwendig restauriert. Heute bietet Speck\grq s Hof eine architektonische und gestalterische Mischung aus Vergangenheit und Gegenwart und ist beispielsweise durch Malereien und Plastiken der Künstler Bruno Griesel, Johannes Grützke und Moritz Götze verziert. Einen besonders markanten Punkt bildet dabei der Klangbrunnen, welcher sich zentral in dem acht-eckigen Lichthof der Passage befindet.
+	Charakteristisch für die Leipziger Innenstadt, ist die Vielzahl an Passagen und Durchgangshöfen, welche das Stadtbild prägen. Die älteste, erhaltene Ladenpassage ist Speck\grq s Hof, welche zwischen 1908 und 1929, durch den Bau des Messehauses entstand. Den Namen erhielt die Passage auf Grund des Kaufhofes des Freiherrn von Speck, welches zuvor an dieser Stelle stand. Sie befindet sich an der Kreuzung Reichstraße / Grimmaische Straße, in direkter Nähe zur Nikolaikirche und ist mit dem Hansa Haus verbunden. In den Jahren 1993 bis 1995 wurde die Passage aufwendig restauriert. Heute bietet Speck\grq s Hof eine architektonische und gestalterische Mischung aus Vergangenheit und Moderne und ist beispielsweise durch Malereien und Plastiken der Künstler Bruno Griesel, Johannes Grützke und Moritz Götze verziert. Einen besonders markanten Punkt bildet dabei der Klangbrunnen, welcher sich zentral in dem acht-eckigen Lichthof der Passage befindet.
 	
 			\begin{figure}[H]
 				\includegraphics[width=\linewidth]{img/places/sh_map.jpg}
@@ -161,7 +162,7 @@
 				Objektiv: &Canon EF 10-22mm \\
 				& F/3.5-4.5 USM\\		
 				Brennweite:& 10mm \\
-				Belichtungszeit: & $\frac{1}{2}$s / 1s / 1.3s\\
+				Belichtungszeit: & $\frac{1}{2}$s - 1.3s\\
 				Blendenwert: & f/8\\
 				Empfindlichkeit & ISO 100 \\
 			\end{tabular}\\
@@ -171,18 +172,30 @@
 		\end{minipage}%
 		
 	\subsubsection{Vorgehen und Fehleranalyse}
-	 Die Aufnahmereihe entstand am 05.11.2016 um 16:58 Uhr. Dabei wurde die Kamera nahe dem Eingang platziert und mit einem vertikalen Winkel von 0$^\circ$ mittig auf den Klangbrunnen ausgerichtet. Es wurden sieben Einzelbilder aufgenommen, welche später, zu einem 180$^\circ$ Panorama zusammengesetzt werden. Jedes der Teilbilder wurde mit einem horizontalen Versatz von 30$^\circ$ aufgenommen, sodass diese später, durch das in Punkt \ref{ch:stitiching} beschriebene Stitching, ohne Fehler zusammengefügt werden können. Aufgrund der zuvor durchgeführten Justage des NPP, sind keine Parallaxverschiebungen aufgetreten.
+	 Die Aufnahmereihe entstand am 05.11.2016 um 16:58 Uhr. Dabei wurde die Kamera nahe dem Eingang platziert und mit einem vertikalen Winkel von 0$^\circ$ mittig auf den Klangbrunnen ausgerichtet.  Zunächst wurden die Einzelbilder mit einem horizontalen Versatz von 45$^\circ$ aufgenommen. Während des späteren Stitchings stellte sich heraus, dass diese Überlappung der einzelnen Bilder auf Grund der sehr geringen Brennweite von 10mm und der starken Objektivverzerrung am Bildrand, nicht ausreichend ist, um die Bilder fehlerfrei zusammenzusetzen (siehe Abbildung \ref{img:error}). Um dies zu beheben wurden erneut sieben Teilbilder, mit einem horizontalen Versatz von 30$^\circ$ aufgenommen und diese später, durch das in Punkt \ref{ch:stitiching} beschriebene Stitching, ohne Fehler zu einem 180$^\circ$ Panorama zusammengefügt. Auf Grund der zuvor durchgeführten Justage des NPP, sind keine Parallaxverschiebungen aufgetreten.
+	 
+	 \begin{figure}[H]
+	 	\includegraphics[width=\linewidth]{img/error.jpg}
+	 	\caption{Fehlerhaftes Stitching auf Grund eines zu hohen horizontalen Versatzes}
+	 	\label{img:error}
+	 \end{figure}
+	 
+	 \newpage
+	 	 \begin{figure}[h]
+	 	 	\includegraphics[width=\linewidth]{img/ph.jpg}
+	 	 	\caption{180$^\circ$ Panorama -- Specks Hof}
+	 	 \end{figure}
 	
 	\section{180$^\circ$ Panorama -- Auerbachs Keller}
 	\label{sec:auer}
 	\subsubsection{Aufnahmeort und -idee}
-	Einer der Weltweit am bekanntesten Plätze in Leipzig, ist der Auerbachs Keller. Er ist die zweitälteste Gaststätte in Leipzig und verdankt seinen Bekanntheitsgrad vor allem Johann Wolfgang von Goethe. Dieser verbrachte hier, während seines Studiums in Leipzig, viele Abende und verewigte ihn schließlich in seinem Werk Faust I in der gleichnamigen Szene \grqq{}Auerbachs Keller in Leipzig\grqq{}. 
+	Einer der weltweit bekanntesten Plätze in Leipzig, ist der Auerbachs Keller. Er ist die zweitälteste Gaststätte in Leipzig und verdankt seinen Bekanntheitsgrad vor allem Johann Wolfgang von Goethe. Dieser verbrachte hier, während seines Studiums in Leipzig, viele Abende und verewigte ihn schließlich in seinem Werk Faust I in der gleichnamigen Szene \grqq{}Auerbachs Keller in Leipzig\grqq{}. 
 	
 	\bigskip
 	In dieser Szene kommt auch der berühmte Satz \textit{\grqq{}Mein Leipzig lob ich mir! Es ist ein klein Paris und bildet seine Leute.\grqq{}} vor.
 	
 	\bigskip
-	Der Auerbachskeller befindet sich in der Grimmaischen Straße 2–4, direkt unterhalb der Mädler-Passage. Er wird von zwei Statuen eingerahmt, welche 1913 von dem Bildhauer Mathieu Molitor erstellt wurden. Sie zeigen zum Einem Faust zusammen mit Mephisto und zum Anderen drei verzauberte Studenten. Diese befinden sich im Vordergrund und bilden zusammen mit der historischen Passage im Hintergrund ein optimales Motiv für ein 180$^\circ$ Panorama.
+	Der Auerbachskeller befindet sich in der Grimmaischen Straße 2–4, direkt unterhalb der Mädler-Passage. Er wird von zwei Statuen eingerahmt, welche 1913 von dem Bildhauer Mathieu Molitor erstellt wurden. Sie zeigen zum einem Faust zusammen mit Mephisto und zum anderen drei verzauberte Studenten. Diese befinden sich im Vordergrund und bilden zusammen mit der historischen Passage im Hintergrund ein optimales Motiv für ein 180$^\circ$ Panorama.
 	
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/places/ak_map.jpg}
@@ -197,7 +210,7 @@
 			Objektiv: &Canon EF 10-22mm \\
 			& F/3.5-4.5 USM\\		
 			Brennweite:& 10mm \\
-			Belichtungszeit: & 1s / 1.3s / 1.6s / 2s\\
+			Belichtungszeit: & 1s - 2s\\
 			Blendenwert: & f/8\\
 			Empfindlichkeit & ISO 100 \\
 		\end{tabular}\\
@@ -213,18 +226,24 @@
 
 	
 	\subsubsection{Vorgehen und Fehleranalyse}
-	Für die Aufnahme der Einzelbilder wurde genauso vorgegangen, wie es bereits unter Punkt \ref{sec:specks} beschrieben. Die Kamera wurde mit einem vertikalen Winkel von 0$^\circ$ mittig zwischen den beiden Statuen positioniert. Diese befinden sich am rechten und linken Rand des 180$^\circ$ Panoramas. Durch einen horizontalen Versatz von 30$^\circ$ entstanden sieben Teilbilder, welche am 05.11.2016 um 17:07 Uhr aufgenommen wurden. 
+	Für die Aufnahme der Einzelbilder wurde genauso vorgegangen, wie es bereits unter Punkt \ref{sec:specks} beschrieben ist. Die Kamera wurde mit einem vertikalen Winkel von 0$^\circ$ mittig zwischen den beiden Statuen positioniert. Diese befinden sich am rechten und linken Rand des 180$^\circ$ Panoramas. Durch einen horizontalen Versatz von 30$^\circ$ entstanden sieben Teilbilder, welche am 05.11.2016 um 17:07 Uhr aufgenommen wurden. 
 
-	\section{180$^\circ$ Nachtpanorama -- Richard Wagner Platz}
+	 \newpage
+	 \begin{figure}[h]
+	 	\includegraphics[width=\linewidth]{img/ph.jpg}
+	 	\caption{180$^\circ$ Panorama -- Auerbachskeller}
+	 \end{figure}
+
+	\section{180$^\circ$ Nachtpanorama -- Richard-Wagner- Platz}
 	\label{sec:wagner}
 	\subsubsection{Aufnahmeort und -idee}
-	Der Richard-Wagner Platz befindet sich am nordwestlichen Zugang zur Leipziger Innenstadt. Historisch befand sich an dieser Stelle das Ranstädter Tor, eines der vier Stadttore Leipzigs. Namensgeber war der Komponist Richard Wagner, dessen Geburtshaus sich in unmittelbare Nähe befand.
+	Der Richard-Wagner-Platz befindet sich am nordwestlichen Zugang zur Leipziger Innenstadt. Historisch befand sich an dieser Stelle das Ranstädter Tor, eines der vier Stadttore Leipzigs. Namensgeber war der Komponist Richard Wagner, dessen Geburtshaus sich in unmittelbare Nähe befand.
 	
 	\bigskip
-	Der Platz wird eingerahmt von dem Geschäftshaus \grqq{}Großer Blumenberg\grqq{}, den Höfen am Brühl, dem Goerdlerring und der Evangelisch Reformierte Kirche zu Leipzig. Besonders die Fassade der ehemaligen \grqq{}Blechbüchse\grqq{} ist sehr markant und bildet zusammen mit den vier Springbrunnen, welche sich direkt auf dem Platz befinden einen modernen Gegensatz zur restlichen Altstadt Leipzigs.
+	Der Platz wird eingerahmt von dem Geschäftshaus \grqq{}Großer Blumenberg\grqq{}, den Höfen am Brühl, dem Goerdelerring und der Evangelisch Reformierte Kirche zu Leipzig. Besonders die Fassade der ehemaligen \grqq{}Blechbüchse\grqq{} ist sehr markant und bildet zusammen mit den vier Springbrunnen, welche sich direkt auf dem Platz befinden einen modernen Gegensatz zur restlichen Altstadt Leipzigs.
 	
 	\bigskip
-	Zahlreiche Geschäfte, Bars und Restaurants sind am Abend beleuchtet und tauchen den Platz in ein angenehmes Licht, mit einer ruhigen  Atmosphäre. Sodass dieser für das 180$^\circ$ Nachtpanorama gewählt wurde.
+	Zahlreiche Geschäfte, Bars und Restaurants sind am Abend beleuchtet und tauchen den Platz in ein angenehmes Licht, mit einer ruhigen und warmen Atmosphäre. Sodass dieser für das 180$^\circ$ Nachtpanorama gewählt wurde.
 	
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/places/rw_map.jpg}
@@ -239,7 +258,7 @@
 		Objektiv: &Canon EF 10-22mm \\
 		& F/3.5-4.5 USM\\		
 		Brennweite:& 11mm \\
-		Belichtungszeit: & 5s / 6s / 8s\\
+		Belichtungszeit: & 5s - 8s\\
 		Blendenwert: & f/8\\
 		Empfindlichkeit & ISO 100 \\
 	\end{tabular}\\
@@ -251,13 +270,19 @@
 
 			
 	\subsubsection{Vorgehen und Fehleranalyse}
-	Die vier Teilaufnahmen entstanden am 02.11.2016 um 18:26 Uhr. Zu dieser Zeit war es bereits so dunkel, dass eine entsprechende lange Belichtungszeit von fünf bis acht Sekunden notwendig war. Aufgrund dessen musste darauf geachtet werden, dass sich keine Fahrräder beziehungsweise Autos während der Belichtung durch das Bild bewegen, da deren Licht ansonsten zu dem sogenannten \grqq{}Lightstream-Effekt\grqq{} führen(siehe Abbildung \ref{img:ls}). Die lange Belichtungszeit führt dazu, das sich bewegende Objekt, wie Personen, verschwinden und auf den Einzelbildern kaum vorhanden sind. Starre Elemente hingegen, wie beispielsweise der Springbrunnen im Vorder- und die Gebäude im Hintergrund sind klar erkennbar. 
+	Die vier Teilaufnahmen entstanden am 02.11.2016 um 18:26 Uhr. Zu dieser Zeit war es bereits so dunkel, dass eine entsprechend lange Belichtungszeit von fünf bis acht Sekunden notwendig war. Auf Grund dessen musste darauf geachtet werden, dass sich keine Fahrräder beziehungsweise Autos während der Belichtung durch das Bild bewegen, da deren Licht ansonsten zu dem sogenannten \grqq{}Lightstream-Effekt\grqq{} führen (siehe Abbildung \ref{img:ls}). Die lange Belichtungszeit führt dazu, dass sich bewegende Objekte, wie Personen, verschwinden und auf den Einzelbildern kaum vorhanden sind. Starre Elemente hingegen, wie beispielsweise der Springbrunnen im Vorder- und die Gebäude im Hintergrund sind klar erkennbar. 
 	
 		\begin{figure}[H]
 			\includegraphics[width=\linewidth]{img/lighstream.jpg}
 			\caption{Lightstream-Effekt bei langen Belichtungszeiten}
 			\label{img:ls}
 		\end{figure}
+		
+			 \newpage
+			 \begin{figure}[h]
+			 	\includegraphics[width=\linewidth]{img/ph.jpg}
+			 	\caption{180$^\circ$ Nachtpanorama -- Richard Wagner Platz}
+			 \end{figure}
 	
 	\bigskip
 	Die Kamera wurde mit einem vertikalen Winkel von 0$^\circ$  mittig auf dem Platz aufgestellt und in Richtung der Höfe am Brühl ausgerichtet. Die Einzelbilder wurden mit einem Versatz von 45$^\circ$ aufgenommen. Durch die zuvor vorgenommene Justage des NPP treten keine Parallax-Effekte auf. 
@@ -265,7 +290,7 @@
 	\section{360$^\circ$ Panorama -- Augustusplatz}
 	\label{sec:augustus}
 	\subsubsection{Aufnahmeort und -idee}
-	Am östlichen Teil des Leipziger Innenstadtrings befindet sich der Augustusplatz, welcher mit repräsentativen und kulturellen Bauwerken umgeben ist. Die beiden bekanntesten sind das Gewandhaus und die Leipziger Oper, welche sich frontal gegenüberstehen. Unmittelbar vor dem Gewandhaus steht der Mendebrunnen, welcher um 1880 entstand und als letztes historisches Bauwerk dieses Platzes, sowohl Angriffe des zweiten Weltkrieges, als auch Baumaßnahmen der DDR-Zeit überstand. Daneben finden sich unter anderen das City Hochhaus, das neue Augusteum und Paulinum der Universität Leipzig, das Krochhochhaus und die alte Handelspost. Diese prägen das Stadtbild Leipzigs und sorgen dafür, dass der Augustusplatz ideal für ein 360$^\circ$ Panorama geeignet ist.
+	Am östlichen Teil des Leipziger Innenstadtrings befindet sich der Augustusplatz, welcher von repräsentativen und kulturellen Bauwerken umgeben ist. Die beiden bekanntesten sind das Gewandhaus und die Leipziger Oper, welche sich frontal gegenüberstehen. Unmittelbar vor dem Gewandhaus steht der Mendebrunnen, welcher um 1880 entstand und als letztes historisches Bauwerk dieses Platzes, sowohl Angriffe des zweiten Weltkrieges, als auch Baumaßnahmen der DDR-Zeit überstand. Daneben finden sich unter anderen das City Hochhaus, das neue Augusteum und Paulinum der Universität Leipzig, das Krochhochhaus und die alte Handelspost. Diese prägen das Stadtbild Leipzigs und sorgen dafür, dass der Augustusplatz ideal für ein 360$^\circ$ Panorama geeignet ist.
 			\begin{figure}[H]
 				\includegraphics[width=\linewidth]{img/places/ap_map.jpg}
 				\caption{Aufnahmeort Augustusplatz}
@@ -279,9 +304,7 @@
 				Objektiv: &Canon EF 10-22mm \\
 				& F/3.5-4.5 USM\\		
 				Brennweite:& 10mm \\
-				Belichtungszeit: &$\frac{1}{40}$s /$\frac{1}{60}$s / $\frac{1}{80}$s / $\frac{1}{100}$s \\
-				 &$\frac{1}{125}$s / $\frac{1}{160}$s / $\frac{1}{200}$s \\
-				 &$\frac{1}{250}$s / $\frac{1}{400}$s \\
+				Belichtungszeit: &$\frac{1}{40}$s - $\frac{1}{400}$s \\
 				Blendenwert: & f/8\\
 				Empfindlichkeit & ISO 100 \\
 			\end{tabular}\\
@@ -298,16 +321,22 @@
 	Um dieses 360$^\circ$ Panorama zu erstellen, wurden am 02.11.2016 um 14:53 Uhr, 13 Einzelaufnahmen angefertigt, welche einen horizontalen Versatz von jeweils 30$^\circ$ haben. Zuvor wurde die Kamera nicht mittig auf dem Platz, sondern nahe dem Mendebrunnen aufgestellt und mittig zum neuen Paulinum ausgerichtet. Beim späteren Stitchen wurden die Anordnung der Bilder allerdings so verändert, dass die Oper als zentrales Objekt innerhalb des Panoramas platziert ist. 
 	
 	\bigskip
-		Aufgrund des sehr wechselhaften Wetters mussten die 13 Teilbilder zügig hintereinander aufgenommen werden. Wobei aufgrund des Wechsels von Sonne und Wolken immer wieder die Belichtungszeit angepasst werden musste. Durch die genaue Justage des No Parallax Point, treten im späteren 360$^\circ$ Panorama keine Parallax-Effekte auf. Das Stitching konnte problemlos durchgeführt werden, ohne dass falsche Überlappungen oder Verschiebungen auftreten, was besonders gut an dem kleinteiligen Boden erkennbar ist.
+		Aufgrund des sehr wechselhaften Wetters mussten die 13 Teilbilder zügig hintereinander aufgenommen werden. Wobei auf Grund des Wechsels von Sonne und Wolken immer wieder die Belichtungszeit angepasst werden musste. Durch die genaue Justage des No Parallax Point, treten im späteren 360$^\circ$ Panorama keine Parallax-Effekte auf. Das Stitching konnte problemlos durchgeführt werden, ohne dass falsche Überlappungen oder Verschiebungen auftreten, was besonders gut an dem kleinteiligen Boden erkennbar ist.
+
+			 \newpage
+			 \begin{figure}[h]
+			 	\includegraphics[width=\linewidth]{img/ph.jpg}
+			 	\caption{360$^\circ$ Panorama -- Augustusplatz}
+			 \end{figure}
 
 	
 	\section{360$^\circ$ Nachtpanorama -- Marktplatz}
 	\label{sec:markt}
 		\subsubsection{Aufnahmeort und -idee}
-		Leipzigs Marktplatz bildet das Zentrum der Leipziger Innenstadt. Er ist ringsum, sowohl mit historischen, als auch modernen Gebäuden bebaut und bietet somit einen architektonischen Mix aus Alt und Neu. So finden sich an diesem Platz beispielsweise die Alte Waage, das Königshaus und Barthels Hof. Das älteste Bauwerk ist das Alt Rathaus, welches 1556 errichtet wurde. Eine Besonderheit bildet der Rathausturm, welcher dieses asymmetrisch, im Goldenen Schnitt unterteilt. 
+		Leipzigs Marktplatz bildet das Zentrum der Leipziger Innenstadt. Er ist ringsum, sowohl mit historischen, als auch modernen Gebäuden bebaut und bietet somit einen architektonischen Mix aus Alt und Neu. So finden sich an diesem Platz beispielsweise die Alte Waage, das Königshaus und Barthels Hof. Das älteste Bauwerk ist das Alte Rathaus, welches 1556 errichtet wurde. Eine Besonderheit bildet der Rathausturm, welcher dieses asymmetrisch, im Goldenen Schnitt unterteilt. 
 		
 		\bigskip
-		Auf dem Marktplatz herrscht immer reges Treiben, aber in den Abendstunden kommt er zur Ruhe. Durch zahlreichen Geschäfte und Restaurants, die sich um den Platz verteilen wird er in ein warmes, indirektes Licht getaucht, sodass eine ruhige und angenehme Atmosphäre entsteht. Aufgrund dessen und der architektonischen Abwechslung eignet sich der Marktplatz besonders für ein 360$^\circ$ Nachtpanorama.
+		Auf dem Marktplatz herrscht immer reges Treiben, aber in den Abendstunden kommt er zur Ruhe. Durch zahlreichen Geschäfte und Restaurants, die sich um den Platz verteilen wird er in ein warmes, indirektes Licht getaucht, sodass eine ruhige und angenehme Atmosphäre entsteht. Auf Grund dessen und der architektonischen Abwechslung eignet sich der Marktplatz besonders für ein 360$^\circ$ Nachtpanorama.
 		\begin{figure}[H]
 			\includegraphics[width=\linewidth]{img/places/mp_map.jpg}
 			\caption{Aufnahmeort Marktplatz}
@@ -321,9 +350,7 @@
 				Objektiv: &Canon EF 10-22mm \\
 				& F/3.5-4.5 USM\\		
 				Brennweite:& 10mm \\
-				Belichtungszeit: &1.6s / 2s / 2.5s \\
-					& 3.2s / 4s / 5s / 6s \\
-					& 8s \\
+				Belichtungszeit: &1.6s - 8s \\
 				Blendenwert: & f/8\\
 				Empfindlichkeit & ISO 100 \\
 			\end{tabular}\\
@@ -337,7 +364,7 @@
 		\end{minipage}%
 		
 		\subsubsection{Vorgehen und Fehleranalyse}
-		Am 02.11.2016 um 18:14 Uhr dreizehn Einzelaufnahmen um dieses 360$^\circ$ Nachtpanorama zu realisieren. Dabei wurde auf den richtigen Zeitpunkt gewartet um die Bilder während der Blauen Stunde aufzunehmen. Die Blaue Stunde bezeichnet dabei die Zeit während des Sonnenuntergangs und der Dunkelheit, in welcher der Himmel in ein tiefes Blau gefärbt ist und in etwa die gleiche Helligkeit besitzt wie das  künstliches Licht der umgebenen Gebäude. Es wurden mehrere Testaufnahmen gemacht um den perfekten Zeitpunkt zu erwischen(siehe Abbildung \ref{img:bs}).
+		Am 02.11.2016 um 18:14 Uhr wurden dreizehn Einzelaufnahmen gemacht, um dieses 360$^\circ$ Nachtpanorama zu realisieren. Dabei wurde auf den richtigen Zeitpunkt gewartet, damit die Bilder während der Blauen Stunde aufgenommen werden. Die Blaue Stunde bezeichnet dabei die Zeit während des Sonnenuntergangs und der Dunkelheit, in welcher der Himmel in ein tiefes Blau getaucht ist und in etwa die gleiche Helligkeit besitzt wie das  künstliches Licht der umgebenen Gebäude. Es wurden mehrere Testaufnahmen gemacht, um den perfekten Zeitpunkt abzupassen (siehe Abbildung \ref{img:bs}).
 		
 		\begin{figure}[H]
 			\includegraphics[width=\linewidth]{img/bs.jpg}
@@ -348,18 +375,24 @@
 		Die Kamera wurde mittig zum Rathausturm aufgestellt und auf diesen mit einem vertikalen Winkel von 0$^\circ$ zentral ausgerichtet. Alle weiteren Bilder wurden mit einem horizontalen Versatz von 30$^\circ$ aufgenommen. Durch die zuvor durchgeführte Justage des NPP tritt beim späteren Stitching kein Parallax-Fehler auf. 
 		
 		\bigskip
-		Ähnlich wie im Punkt \ref{sec:wagner} bereits beschrieben besteht durch die lange Belichtungszeit die Gefahr eines Lightstream-Effekts, wie in Abbildung \ref{img:ls-m}. Also musste darauf geachtet werden, dass sich während der Aufnahme kein Fahrrad beziehungsweise Auto durch das Bild bewegt und unter Umständen Aufnahmen wiederholt werden. 
+		Ähnlich wie im Punkt \ref{sec:wagner} bereits beschrieben, besteht durch die lange Belichtungszeit die Gefahr eines Lightstream-Effekts, wie in Abbildung \ref{img:ls-m}. Also musste darauf geachtet werden, dass sich während der Aufnahme kein Fahrrad beziehungsweise Auto durch das Bild bewegt und unter Umständen Aufnahmen wiederholt werden. 
 
 		\begin{figure}[H]
 			\includegraphics[width=\linewidth]{img/ls-m.jpg}
 			\caption{Lightstream-Effekt Marktplatz}
 			\label{img:ls-m}
 		\end{figure}
+		
+		 \newpage
+		 \begin{figure}[h]
+		 	\includegraphics[width=\linewidth]{img/ph.jpg}
+		 	\caption{360$^\circ$ Nachtpanorama -- Marktplatz}
+		 \end{figure}
 
 	\section{Kugelpanorama --  Mädler-Passage}
 	\label{sec:kugel}
 			\subsubsection{Aufnahmeort und -idee}
-			Wie im Abschnitt \ref{sec:specks} bereits erläutert ist das Bild der Leipziger Innenstadt von zahlreichen Passagen geprägt. Eine der bekanntesten, größten und vollständig erhaltenen ist die Mädler-Passage in welcher sich auch der Auerbachskeller befindet. Den Namen verdankt die Passage Anton Mädler, welcher sämtliche umliegenden Gebäude abreißen ließ. Anschließend beauftragte er den Bau das Messehauses Mädler Passage, welcher 1912 begann und 1914 abgeschlossen wurde. Die Mädler-Passage besteht aus drei Gängen, welche den Neumarkt, den Messehof und die Grimmaische Straße miteinander verbinden und sich in einer Zentralen Rotunde vereinen. Diese bietet einen Rundumblick in jeden der Gänge und eignet sich aufgrund der historischen Architektur hervorragend für die Realisierung eines Kugelpanoramas.
+			Wie im Abschnitt \ref{sec:specks} bereits erläutert, ist das Bild der Leipziger Innenstadt von zahlreichen Passagen geprägt. Eine der bekanntesten, größten und vollständig erhaltenen ist die Mädler-Passage in welcher sich auch der Auerbachskeller befindet. Den Namen verdankt die Passage Anton Mädler, welcher sämtliche umliegenden Gebäude abreißen ließ. Anschließend beauftragte er den Bau das Messehauses Mädler-Passage, welcher 1912 begann und 1914 abgeschlossen wurde. Die Mädler-Passage besteht aus drei Gängen, welche den Neumarkt, den Messehof und die Grimmaische Straße miteinander verbinden und sich in einer Zentralen Rotunde vereinen. Diese bietet einen Rundumblick in jeden der Gänge und eignet sich auf Grund der historischen Architektur hervorragend für die Realisierung eines Kugelpanoramas.
 			\begin{figure}[H]
 				\includegraphics[width=\linewidth]{img/places/mae_map.jpg}
 				\caption{Aufnahmeort Mädler-Passage}
@@ -373,7 +406,7 @@
 					Objektiv: &Canon EF 10-22mm \\
 					& F/3.5-4.5 USM\\		
 					Brennweite:& 12mm \\
-					Belichtungszeit: &$\frac{1}{5}$s / $\frac{1}{4}$s / $\frac{1}{2}$s / 1s\\
+					Belichtungszeit: &$\frac{1}{5}$s - 1s\\
 					Blendenwert: & f/8\\
 					Empfindlichkeit & ISO 100 \\
 				\end{tabular}\\
@@ -381,7 +414,7 @@
 			\begin{minipage}{0.42\textwidth}
 				\begin{figure}[H]
 					\includegraphics[width=\linewidth]{img/places/mae.jpg}
-					\caption{Aufnahmesituation  Mädler-Passage}
+					\caption{Aufnahmesituation innerhalb der Mädler-Passage}
 					\label{img:ak}
 				\end{figure}
 			\end{minipage}%
@@ -390,11 +423,17 @@
 			Für die Realisierung des Kugelpanoramas, wurde die Kamera am 02.11.2016 um 15:07 Uhr zentral in der Rotunde der Mädler-Passage aufgestellt. Anschließend erfolgte die Aufnahme der Einzelbilder in vier Schritten. Zunächst werden bei einem vertikalen Winkel von 0$^\circ$ zwölf Einzelbilder mit einem horizontalen Versatz von jeweils 30$^\circ$ aufgenommen. Dieser Schritt wird anschließend zweimal, mit einem vertikalen Winkel von +45$^\circ$ und -45$^\circ$ wiederholt. Abschließend folgen je eine Aufnahme des Himmels und der Erde mit +90$^\circ$ beziehungsweise -90$^\circ$. So erhält man schließlich 38 Einzelbilder, welche zu einem Kugelpanorama zusammen gestitched werden.
 			
 			\bigskip
-			Es wurde versucht möglichst wenig Personen mit abzubilden, aber aufgrund der hohen Frequentierung der Passage konnte dies nicht vollständig vermieden werden. Allerdings ist dies, aufgrund der Bildidee einen Einblick in das Treiben innerhalb der Passage zu zeigen, nicht problematisch. Während des Stitchings treten keine Parallax-Fehler auf, was auf die richtige Justage des NPP zurückzuführen ist. 
+			Es wurde versucht möglichst wenig Personen mit abzubilden, aber auf Grund der hohen Frequentierung der Passage konnte dies nicht vollständig vermieden werden. Allerdings ist dies, auf Grund der Bildidee einen Einblick in das Treiben innerhalb der Passage zu zeigen, nicht problematisch. Während des Stitchings treten keine Parallax-Fehler auf, was auf die richtige Justage des NPP zurückzuführen ist. 
+			
+					 \newpage
+					 \begin{figure}[h]
+					 	\includegraphics[width=\linewidth]{img/ph.jpg}
+					 	\caption{Kugelpanorama --  Mädler-Passage}
+					 \end{figure}
 			
 	\chapter{Stitching}
 	\label{ch:stitiching}
-	Für ein Panorama aufgenommene Einzelbilder werden in der digitalen Fotografie mittels des sogenannten Stitchings zu einem Gesamtbild zusammengesetzt. Um diesen Vorgang weitestgehend zu automatisieren, gibt es verschiedene kostenlose oder auch kostenpflichtige Programme. In dieser Arbeit wird dabei näher auf Photoshop (\ref{sec:photoshop}) und PTGui Pro (\ref{sec:ptgui}) eingegangen, da diese für die Erstellung und Bearbeitung im Vordergrund stehen. Eine freie Softwarealternative für das Stitchen ist Hugin, welches in dieser Arbeit allerdings keine Verwendung findet, da die eben genannten Alternativen bereits alle benötigten Funktionen beherrschen.
+	Die für ein Panorama aufgenommenen Einzelbilder werden in der digitalen Fotografie, mittels des sogenannten Stitchings, zu einem Gesamtbild zusammengesetzt. Um diesen Vorgang weitestgehend zu automatisieren, gibt es verschiedene kostenlose oder auch kostenpflichtige Programme. In dieser Arbeit wird dabei näher auf Photoshop (\ref{sec:photoshop}) und PTGui Pro (\ref{sec:ptgui}) eingegangen, da diese für die Erstellung und Bearbeitung im Vordergrund stehen. Eine kostenfreie Softwarealternative für das Stitchen ist Hugin, welches in dieser Arbeit allerdings keine Verwendung findet, da die eben genannten Alternativen bereits alle benötigten Funktionen beherrschen.
 	
 	\section{PTGUI Pro}
 	\label{sec:ptgui}
@@ -420,21 +459,21 @@
 		\label{img:ptgui_step_3}
 	\end{figure}
 	\bigskip
-	Mit einem Klick auf \grqq{}Align Images\grqq{} beginnt die Software mit dem Stitching der Einzelbilder. Anschließend öffnet sich ein weiteres Fenster, auf welchem das zusammengefügte Panorama betrachten lässt. Zudem werden den bereits bestehenden Tabs weitere angefügt s. Abb. \ref{img:ptgui_step_4}. 
+	Mit einem Klick auf \grqq{}Align Images\grqq{} beginnt die Software mit dem Stitching der Einzelbilder. Anschließend öffnet sich ein weiteres Fenster, auf welchem sich dass zusammengefügte Panorama betrachten lässt. Zudem werden den bereits bestehenden Tabs weitere angefügt s. Abb. \ref{img:ptgui_step_4}. 
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/PTGui_Step_4.PNG}
 		\caption{PTGui Pro: Panoramaerstellung}
 		\label{img:ptgui_step_4}
 	\end{figure}
 	\bigskip
-	Wie in Abb. \ref{img:ptgui_step_4_1} zu sehen ist, kann man mit Hilfe der Maskierung in PTGui Pro, Bereiche kennzeichnen. Diese Markierungen geben an, ob diese Bereiche vom Foto im fertigen Panorama vorhanden (grün) oder nicht  vorhanden (rot) sein sollen. Die Software versucht diesem Wunsch nachzukommen und nimmt für rot markierte Bereiche überlappende Teile aus dem Nachbarbild und fügt diese stattdessen ein.
+	Wie in Abb. \ref{img:ptgui_step_4_1} zu sehen ist, kann man mit Hilfe der Maskierung in PTGui Pro, Bereiche kennzeichnen. Diese geben an, ob bestimmte Bereiche des Fotos im fertigen Panorama vorhanden (grün) oder nicht  vorhanden (rot) sein sollen. Die Software versucht diesem Wunsch nachzukommen und nimmt für rot markierte Bereiche überlappende Teile aus dem Nachbarbild und fügt diese stattdessen ein.
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/PTGui_Step_4_1.PNG}
 		\caption{PTGui Pro: Maskierung}
 		\label{img:ptgui_step_4_1}
 	\end{figure}
 	\bigskip
-	Zudem bietet die Software die Möglichkeit für die jeweils zusammengefügten Fotos die sog. Kontrollpunkte zu überprüfen, verändern oder neue zu setzen. Mittels dieser bestimmt die Software, an welchen Stellen die beiden Bilder zusammengefügt werden. Dies ist in Abb. \ref{img:ptgui_step_5} zu sehen. Ein Kontrollpunkt auf dem linken Foto muss dabei einen auf dem rechten Bild entsprechen.
+	Zudem bietet die Software die Möglichkeit für die jeweils zusammengefügten Fotos die sog. Kontrollpunkte zu überprüfen, zu verändern oder neue zu setzen. Mit Hilfe dieser Kontrollpunkte können in benachbarten Bildern Referenzpunkte festgelegt werden, sodass die Software erkennt, an welchen Stellen die beiden Bilder zusammengefügt werden müssen. Dies ist in Abb. \ref{img:ptgui_step_5} zu sehen. Ein Kontrollpunkt auf dem linken Foto muss dabei einen auf dem rechten Bild entsprechen.
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/PTGui_Step_5.PNG}
 		\caption{PTGui Pro: Kontrollpunkte}
@@ -448,7 +487,7 @@
 		\label{img:ptgui_step_6}
 	\end{figure}
 	\bigskip
-	Nach all diesen Schritten, kann das Panorama exportiert werden s. Abb. \ref{img:ptgui_step_7}. Für dieses Projekt wird das Panorama im TIFF-Format gespeichert, um es in der Nachbearbeitung möglichst verlustfrei korrigieren zu können. Durch einen Klick auf \grqq{}Create Panorama\grqq{} wird der Speichervorgang gestartet. Alternativ ist es auch möglich zusätzlich eine Projektdatei anzulegen, welche für eventuelle, nachträgliche Korrekturen geladen werden kann. 
+	Nach all diesen Schritten, kann das Panorama exportiert werden s. Abb. \ref{img:ptgui_step_7}. Für dieses Projekt wird das Panorama im TIFF-Format gespeichert, um es in der Nachbearbeitung möglichst verlustfrei korrigieren zu können. Durch einen Klick auf \grqq{}Create Panorama\grqq{} wird der Speichervorgang gestartet. Alternativ ist es auch möglich, zusätzlich eine Projektdatei anzulegen, welche für eventuelle, nachträgliche Korrekturen geladen werden kann. 
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/PTGui_Step_7.PNG}
 		\caption{PTGui Pro: Export}
@@ -457,7 +496,7 @@
 	
 	\section{Adobe Photoshop}
 	\label{sec:photoshop}
-	Adobe Photoshop beinhaltet das Tool \grqq{}Photomerge\grqq{}, mit dessen Hilfe Bilderreihen zu Panoramas zusammengefügt werden können. Dieses Kapitel befasst sich deswegen mit dem Stitching mittels Photoshop, wobei zugleich das Programm PTGui Pro (Kap. \ref{sec:ptgui}) als Vergleich herbeigezogen wird.
+	Adobe Photoshop beinhaltet das Tool \grqq{}Photomerge\grqq{}, mit dessen Hilfe Bilderreihen zu Panoramen zusammengefügt werden können. Dieses Kapitel befasst sich deswegen mit dem Stitching mittels Photoshop, wobei zugleich das Programm PTGui Pro (Kap. \ref{sec:ptgui}) als Vergleich herangezogen wird.
 	\bigskip
 	Das Tool Photomerge ist über das Menü unter Datei, Automatisieren zu erreichen. Nach dem Starten öffnet sich ein neues Fenster mit mehreren Einstellungsmöglichkeiten s. Abb. \ref{img:photoshop_step_2}.
 	In dieser Ansicht kann auf der linken Seite der gewünschte Panoramatyp mittels einer Checkbox ausgewählt werden. In der Mitte befindet sich der Fotoimport. Es werden alle gängigen Bildformate unterstützt, auch RAW-Dateien. Zusätzliche Korrekturen, wie Vignettierungsentfernung, Verzerrungskorrektur und Auffüllung von Leerbereichen sind auswählbar. Im Gegensatz zu PTGui Pro sind keine weiteren Einstellungsmöglichkeiten vorhanden. Mit der Bestätigung auf \grqq{}OK\grqq{} erstellt Photomerge selbstständig und automatisiert ein Panorama.
@@ -468,14 +507,14 @@
 	\end{figure}
 	\bigskip
 
-	Photomerge lädt die Fotos während des Stitchen als Ebenen in Photoshop und realisiert die Überblendungen der Einzelbilder mittels Ebenenmasken s. Abb. \ref{img:photoshop_step_3}. In diesem Beispiel handelt es sich um das 180 Grad Panorama vom Speck\grq s Hof (\ref{sec:specks}). Das Resultat ist einwandfrei und beinhaltet keinerlei Überblendungsfehler.
+	Photomerge lädt die Fotos während des Stitchen als Ebenen in Photoshop und realisiert die Überblendungen der Einzelbilder mittels Ebenenmasken s. Abb. \ref{img:photoshop_step_3}. In diesem Beispiel handelt es sich um das 180 Grad Panorama vom Speck\grq s Hof (\ref{sec:specks}). Das Resultat ist ein korrekt erstelltes Panorama und beinhaltet keinerlei Überblendungsfehler.
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/Photoshop_Step_3.png}
 		\caption{Photomerge: Speck\grq s Hof}
 		\label{img:photoshop_step_3}
 	\end{figure}
 	\bigskip
-	Anders verhält es sich bei komplexeren Panoramen, wie z. B. bei dem Kugelpanorama der Mädler--Passage (s. Abb. \ref{img:photoshop_step_kugel}). Photomerge ist es nicht gelungen die Bilder in der richtigen Reihenfolge zusammenzusetzen. Da das Tool keine Möglichkeit einer Korrektur, Nachjustierung oder Neuanordnung bietet, kann das Panorama nicht damit umgesetzt werden.
+	Anders verhält es sich bei komplexeren Panoramen, wie z. B. bei dem Kugelpanorama der Mädler-Passage (s. Abb. \ref{img:photoshop_step_kugel}). Photomerge ist es nicht gelungen die Bilder in der richtigen Reihenfolge zusammenzusetzen. Da das Tool keine Möglichkeit einer Korrektur, Nachjustierung oder Neuanordnung bietet, kann dieses Panorama mit Photomerge nicht umgesetzt werden.
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/Photoshop_Step_Kugel.png}
 		\caption{Photomerge: Kugelpanorama}
@@ -502,7 +541,7 @@
 	
 	\section{Adobe Lightroom}
 	\label{sec:lightroom}
-	Lightroom stammt auch aus dem Hause Adobe und dient hauptsächlich Verwaltung und Nachbearbeitung von Fotos. So erkennt die Software automatisch die meisten Kameramodelle und bietet entsprechende Entzerrungs- und Korrekturoptionen an. So ist beispielsweise möglich, Abberationen automatisiert zu entfernen. In diesem Projekt wird vorerst der Weißabgleich angepasst und anschließend die Tiefen und Höhen bearbeitet. Die Lichter und der Weißwert müssen so angeglichen werden, dass es möglichst keine ausgebrannten Stellen gibt. Zusätzlich erfolgt die Korrektur von Kontrast, Sättigung und Schärfe. in der Abbildung \ref{img:lightroom_bearbeitung} wird ein solcher Korrekturvorgang beispielhaft veranschaulicht. Zum Schluss erfolgt, falls nötig, nochmals die Auswahl des richtigen Bildausschnittes.
+	Lightroom stammt auch aus dem Hause Adobe und dient hauptsächlich der Verwaltung und Nachbearbeitung von Fotos. So erkennt die Software automatisch die meisten Kameramodelle und bietet entsprechende Entzerrungs- und Korrekturoptionen an. So ist es beispielsweise möglich, Abberationen automatisiert zu entfernen. In diesem Projekt wird vorerst der Weißabgleich angepasst und anschließend die Tiefen und Höhen bearbeitet. Die Lichter und der Weißwert müssen so angeglichen werden, dass es möglichst keine ausgebrannten Stellen gibt. Zusätzlich erfolgt die Korrektur von Kontrast, Sättigung und Schärfe. in der Abbildung \ref{img:lightroom_bearbeitung} wird ein solcher Korrekturvorgang beispielhaft veranschaulicht. Zum Schluss erfolgt, falls nötig, nochmals die Auswahl des richtigen Bildausschnittes.
 	\begin{figure}[H]
 		\includegraphics[width=\linewidth]{img/steps/Lightroom_kugel.PNG}
 		\caption{Lightroom: Nachbearbeitung}
